@@ -1,8 +1,9 @@
 package configinit
 
 import (
+	"PCS_BACKEND_GO/authentication"
+	"PCS_BACKEND_GO/global"
 	"PCS_BACKEND_GO/global/database"
-	"PCS_BACKEND_GO/service/basic"
 	"log"
 
 	"github.com/go-ini/ini"
@@ -21,5 +22,9 @@ func init() {
 	database.Username = cfg.Section("database").Key("USERNAME").String()
 	database.Password = cfg.Section("database").Key("PASSWORD").String()
 
-	basic.Secret = []byte(cfg.Section("auth").Key("SECRET").String())
+	authentication.Secret = []byte(cfg.Section("auth").Key("SECRET").String())
+
+	global.IP = cfg.Section("host").Key("IP").String()
+	global.Port = cfg.Section("host").Key("PORT").String()
+
 }

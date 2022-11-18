@@ -2,12 +2,14 @@ package main
 
 import (
 	// init
+	"PCS_BACKEND_GO/global"
 	_ "PCS_BACKEND_GO/init/configinit"
 	_ "PCS_BACKEND_GO/init/sqlinit"
 	"os"
 
 	"PCS_BACKEND_GO/init/routerinit"
 	"PCS_BACKEND_GO/router/calendarrouter"
+	"PCS_BACKEND_GO/router/userrouter"
 	"log"
 )
 
@@ -29,10 +31,10 @@ func main() {
 	log.Println("test test ")
 
 	// 加載路由
-	routerinit.Include(calendarrouter.CalendarApi)
+	routerinit.Include(calendarrouter.CalendarApi, userrouter.UserApi)
 	r := routerinit.InitRouters()
 
-	err = r.Run() // listen and serve on 0.0.0.0:8080
+	err = r.Run(global.IP + ":" + global.Port) // listen and serve on 0.0.0.0:8080
 	if err != nil {
 		log.Println("err ", err.Error())
 	}

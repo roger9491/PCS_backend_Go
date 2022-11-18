@@ -3,10 +3,10 @@ package sqlinit
 import (
 	"PCS_BACKEND_GO/global/database"
 	"PCS_BACKEND_GO/model/calendar"
+	"PCS_BACKEND_GO/model/user"
 	"database/sql"
 	"fmt"
 	"log"
-	"os/user"
 	"time"
 
 	"gorm.io/driver/mysql"

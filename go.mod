@@ -5,6 +5,7 @@ go 1.19
 require gorm.io/driver/mysql v1.4.3
 
 require (
+	github.com/gin-contrib/cors v1.4.0 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/gin-gonic/gin v1.8.1 // indirect
 	github.com/go-ini/ini v1.67.0 // indirect
