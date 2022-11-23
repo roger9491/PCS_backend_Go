@@ -16,27 +16,27 @@
 
 ### 架構
 
-> ├─authentication
-> ├─dao
-> │  ├─calendardao
-> │  └─userdao
-> ├─global
-> │  └─database
-> ├─init
-> │  ├─configinit
-> │  ├─routerinit
-> │  └─sqlinit
-> ├─model
-> │  ├─calendar
-> │  └─user
-> ├─router
-> │  ├─calendarrouter
-> │  ├─runprogramrouter
-> │  └─userrouter
-> └─service
->     ├─calendarservice
->     ├─runprogramservice
->     └─userservice
+├─authentication
+├─dao
+│  ├─calendardao
+│  └─userdao
+├─global
+│  └─database
+├─init
+│  ├─configinit
+│  ├─routerinit
+│  └─sqlinit
+├─model
+│  ├─calendar
+│  └─user
+├─router
+│  ├─calendarrouter
+│  ├─runprogramrouter
+│  └─userrouter
+└─service
+    ├─calendarservice
+    ├─runprogramservice
+    └─userservice
 
 ​	主要分成 router、model、service
 
