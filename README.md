@@ -16,6 +16,7 @@
 
 ### 架構
 
+```bash
 ├─authentication
 ├─dao
 │  ├─calendardao
@@ -37,6 +38,7 @@
     ├─calendarservice
     ├─runprogramservice
     └─userservice
+```
 
 ​	主要分成 router、model、service
 
